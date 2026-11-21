@@ -4,6 +4,8 @@ import './AssignedCleaningTasks.css';
 import '../admin/AdminDashboard.css';
 import beachImage from '../../assets/bella-beachh.jpg';
 
+import CleaningTaskStatus from './CleaningTaskStatus';
+
 function AssignedCleaningTasks() {
 
     const [tasks, setTasks] = useState([]);
@@ -108,7 +110,8 @@ function AssignedCleaningTasks() {
                                     <th>Reservation ID</th>
                                     <th>Request Date</th>
                                     <th>Task Details</th>
-                                    <th>Status</th>
+                                    <th>Current Status</th>
+                                    <th>Update Status</th>
                                 </tr>
                             </thead>
 
@@ -121,12 +124,15 @@ function AssignedCleaningTasks() {
                                             <td>{task.reservation_id}</td>
                                             <td>{task.request_date}</td>
                                             <td>{task.description}</td>
-                                            <td>{task.status}</td>
+
+                                            <CleaningTaskStatus
+                                            task ={task}
+                                            staffId={staffId}/>
                                         </tr>
                                     ))
                                 ) : (
                                     <tr>
-                                        <td colSpan="6" className="staff-no-tasks">
+                                        <td colSpan="7" className="staff-no-tasks">
                                             No assigned cleaning tasks.
                                         </td>
                                     </tr>

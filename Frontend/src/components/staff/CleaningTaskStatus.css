@@ -1,0 +1,32 @@
+.cleaning-status {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cleaning-status select {
+    padding: 9px;
+    border: 1px solid #d8c5b2;
+    border-radius: 7px;
+    background-color: #fffdf9;
+    color: #694638;
+}
+
+.cleaning-status button {
+    background-color: #694638;
+    color: white;
+    padding: 9px 13px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.cleaning-status button:hover {
+    background-color: #8c604b;
+}
+
+.cleaning-status p {
+    color: #287a45;
+    font-size: 12px;
+    margin: 0;
+}
